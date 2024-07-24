@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<body>
+
+
+  <header>
+    <div class="header_nav">
+        <div class="Header_nav_wrapper">
+            <ul>
+                <li><a href="">BLOG</a></li>
+                <li><a href="">UPDATES</a></li>
+                <li><a href="">RESOURCES</a></li>
+                <li><a href="">COMMUNITY</a></li>
+            </ul>
+        </div>
+       
+
+        <div class="right_nav">
+            <div class="input">
+                <input type="text">
+                <img src="assets/icons/lupaa.png" alt="">
+            </div>
+        
+
+            <div class="right_nav-select">
+                <select name="" id="">
+                    <option value="">UZB</option>
+                    <option value="">RUS</option>
+                    <option value="">ANG</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <div class="header_text">
+      <div class="header_text-title">
+        <h1>
+          20,943,843
+        </h1>
+      </div>
+      <div class="header_text-Information">
+        <p>
+          UNIQUE PLAYERS LAST MONTH 
+        </p>
+      </div>
+    </div>
+
+    
+  </header>
+
+  <main>
+    <section>
+        <h1 class="main_first-title">
+            MAJOR UPDATES
+        </h1>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="assets/img/karusel.png" style="height: 250px; width: 500px;">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="assets/img/karusel 2.png" style="height: 250px; width: 500px;">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="assets/img/karusel 3.png" style="height: 250px; width: 500px;">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div class="carusel_ziros" style="text-align:center">
+              <span class="dot" onclick=""></span> 
+              <span class="dot" onclick=""></span> 
+              <span class="dot" onclick=""></span> 
+            </div>
+    </section>
+
+    <section class="main_section">
+        <div class="main_wrappaer">
+            <div class="main_first">
+                <h2 class="main_text-big">
+                    PGL Antwerp 2022 Champions!
+                </h2>
+
+                <div class="main_foto-text">
+                    <img class="main_foto" src="assets/img/rasm 1.png" alt="">
+
+                    <p class="main_text-first">
+                        This weekend, thousands of screaming fans in Antwerp and millions of viewers around the world witnessed the crowning of a new Major Champion. Congratulations to FaZe Clan who proved to be an unstoppable force, taking the Grand Final 2-0.
+                        
+                        Today we’re releasing the champions autograph capsule, featuring autograph stickers in paper, glitter, holo, and gold. Celebrate rain, karrigan, broky, ropz, and Twistzz by supporting them in style–50% of the proceeds are shared with the
+                    </p>
+                </div>
+            </div>
+
+            <div class="main_second">
+                <h2 class="main_text-third">
+                    The stage is set in Antwerp
+                </h2>
+
+                <div class="main_foto-text">
+                    <img class="main_foto" src="assets/img/rasm 2.png" alt="">
+
+                    <p class="main_text-second">
+                        The Legends stage was a brutal test, but eight teams survived and earned their place on the main stage. Congratulations to Team Spirit, ENCE, Copenhagen Flames, FaZe, FURIA, Heroic, Natus Vincere, and Ninjas in Pyjamas. They’ll play out the rest of this event in front of the roaring crowds in Antwerp. Best of luck to all!Matches start Thursday, so you still have a few hours to make your picks in the Pick’Em Challenge. Earn souvenir tokens (or purchase some more), and support for your favorite teams
+                    </p>
+                </div>
+
+                <ul class="main_nav-wrapper">
+                    <li>
+                        <a href="">Tweet</a>
+                    </li>
+                    <li>
+                        <img src="assets/icons/facebook.png" alt="">
+                    </li>
+                    <li>
+                        <img src="assets/icons/reddit.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+<footer>
+    <div class="footer_first">
+        <img src="assets/icons/logo.png" alt="">
+        <div class="footer_nav">
+          <ul>
+              <li>
+                  <a href="">BLOG</a>
+              </li>
+              <li>
+                  <a href="">UPDATES</a>
+              </li>
+              <li>
+                  <a href="">RESOURCES</a>
+              </li>
+              <li>
+                  <a href="">COMMUNITY</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</footer>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+</body>
+
+</html>
+
+</body>
+</html>
